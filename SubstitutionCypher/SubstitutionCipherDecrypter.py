@@ -6,8 +6,7 @@ all_letters = string.ascii_letters
 current_dir = os.path.dirname(__file__)   # Reading/Writing files in source file directory 
 encryptedFilePath = os.path.join(current_dir,'Encrypted.txt')  # Joining paths of file 
 
-encryptedFile = open(encryptedFilePath,'r')   # Fetching encrypted file
-encryptedFile = encryptedFile.read()        # Reading content of fetched file
+encryptedFile = open(encryptedFilePath,'r').read()   # Fetching and reading encrypted file
 
 
 dict1 = {}    # Initializong dictionary for plain letters to corresponding cipher letters
