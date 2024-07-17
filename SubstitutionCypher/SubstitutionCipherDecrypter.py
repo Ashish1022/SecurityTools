@@ -1,7 +1,12 @@
+import os
 import string
 
 all_letters = string.ascii_letters
-encryptedFile = open('Encrypted.txt','r')   # Fetching encrypted file
+
+current_dir = os.path.dirname(__file__)   # Reading/Writing files in source file directory 
+encryptedFilePath = os.path.join(current_dir,'Encrypted.txt')  # Joining paths of file 
+
+encryptedFile = open(encryptedFilePath,'r')   # Fetching encrypted file
 encryptedFile = encryptedFile.read()        # Reading content of fetched file
 
 
@@ -20,6 +25,9 @@ for char in encryptedFile:
     else:
         decryptedText.append(char)
         
+
+filePath = os.path.join(current_dir,'Decrypted.txt')  # Creating file in corresponding folder on source file
+        
 decryptedText = "".join(decryptedText)
-decryptedTextFile = open('Decrypted.txt','w') # Storing decrypted text in seperate file
+decryptedTextFile = open(filePath,'w') # Storing decrypted text in seperate file
 decryptedTextFile.write(decryptedText)

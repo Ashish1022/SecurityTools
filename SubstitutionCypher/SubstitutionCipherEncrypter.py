@@ -1,4 +1,5 @@
 import string
+import os
 
 all_letters = string.ascii_letters   # Getting all letters
 
@@ -21,6 +22,9 @@ for char in (plain_text):
     else:
         cipher_text.append(char)
         
+current_dir = os.path.dirname(__file__)   # Reading/Writing files in source file directory 
+encryptedFilePath = os.path.join(current_dir,'Encrypted.txt')  # Joining paths of file 
+        
 cipher_text= "".join(cipher_text)
-encryptedFile = open('Encrypted.txt','w')  # Storing encrypted text in seperate file
+encryptedFile = open(encryptedFilePath,'w')  # Storing encrypted text in seperate file
 encryptedFile.write(cipher_text)
