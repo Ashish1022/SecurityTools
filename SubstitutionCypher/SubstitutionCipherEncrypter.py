@@ -26,5 +26,4 @@ current_dir = os.path.dirname(__file__)   # Reading/Writing files in source file
 encryptedFilePath = os.path.join(current_dir,'Encrypted.txt')  # Joining paths of file 
         
 cipher_text= "".join(cipher_text)
-encryptedFile = open(encryptedFilePath,'w')  # Storing encrypted text in seperate file
-encryptedFile.write(cipher_text)
+encryptedFile = open(encryptedFilePath,'w').write(cipher_text)  # Storing encrypted text in seperate file
