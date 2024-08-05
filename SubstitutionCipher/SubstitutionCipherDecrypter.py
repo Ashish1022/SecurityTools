@@ -30,3 +30,4 @@ filePath = os.path.join(current_dir,'Decrypted.txt')  # Creating file in corresp
 decryptedText = "".join(decryptedText)
 decryptedTextFile = open(filePath,'w') # Storing decrypted text in seperate file
 decryptedTextFile.write(decryptedText)
+print("Decrypted text : ",decryptedText )
